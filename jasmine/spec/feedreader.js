@@ -33,10 +33,16 @@ $(function() {
          */
 
          it('has a URL defined', () => {
-           for(var feed of allFeeds) {
+           /*for(let feed of allFeeds) {
              expect(feed.url).toBeDefined();
              expect(feed.url.lrngth).not.toBe(0);
-           }
+           }*/
+
+           //trying to use forEach for practice
+           allFeeds.forEach(feed => {
+             expect(feed.url).toBeDefined();
+             expect(feed.url.lrngth).not.toBe(0);
+           })
          });
 
 
@@ -44,6 +50,13 @@ $(function() {
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
+
+         it('has a name defined', () => {
+           allFeeds.forEach(feed => {
+             expect(feed.name).toBeDefined();
+             expect(feed.name.length).not.toBe(0);
+           })
+         });
     });
 
 
