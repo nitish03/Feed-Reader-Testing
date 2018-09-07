@@ -133,6 +133,34 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+         let oldFeed;
+         let newFeed;
+
+         // using jasmine's asynchronous done function
+
+         beforeEach(done => {
+           
+           // first feed
+           loadFeed(0, () => {
+             oldFeed = document.querySelector('.feed').innerHTML;
+
+          // next feed
+          loadFeed(1, () => {
+            newFeed = document.querySelector('.feed').innerHTML;
+            done();
+          });
+        });
+      });
+
+         // when a new feed is loaded by the loadFeed function that the content actually changes
+
+         it('changes in content', () => {
+           expect(oldFeed).not.toBe(newFeed);
+
+           // or we can compare both feeds entries
+           // expect(oldFeed === newFeed).toBe(false);
+         });
     });
 
 }());
