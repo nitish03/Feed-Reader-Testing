@@ -140,7 +140,7 @@ $(function() {
          // using jasmine's asynchronous done function
 
          beforeEach(done => {
-           
+
            // first feed
            loadFeed(0, () => {
              oldFeed = document.querySelector('.feed').innerHTML;
@@ -162,5 +162,4 @@ $(function() {
            // expect(oldFeed === newFeed).toBe(false);
          });
     });
-
 }());
