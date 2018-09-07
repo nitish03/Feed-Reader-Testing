@@ -106,6 +106,25 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
+         beforeEach(done => {
+
+           // empty out all previous entries
+
+           const feed = $('.feed');
+           feed.empty();
+
+           //ensures that loadfeed will complete before the test
+           loadFeed(0, done);
+         });
+
+         // there is at least a single entry element within the feed container
+
+         it('at least single entry element', () => {
+           const enteryElement = $('.entry');
+           expect(enteryElement.length).toBeGreaterThan(0);
+         });
+       });
+
     /* TODO: Write a new test suite named "New Feed Selection" */
 
         /* TODO: Write a test that ensures when a new feed is loaded
@@ -113,5 +132,5 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-      });
+
 }());
