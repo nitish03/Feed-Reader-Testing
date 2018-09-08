@@ -24,7 +24,7 @@ Download the repository then click on the index.html file and launch in the brow
 2. It ensures that menu changes the visibility when you click on the menu icon.
 
 ### Third test, Initial Entries
-1. It ensures ensures when the loadFeed function is called and completes its work.
+1. It ensures when the loadFeed function is called and completes its work.
 2. It ensures there is a at least single entry element within the  feed container.
 
 ### Fourth test, New Feed Selection

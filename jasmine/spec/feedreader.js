@@ -27,29 +27,23 @@ $(function() {
         });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a URL defined
-         * and that the URL is not empty.
-         */
+         // ensures it has a URL defined and that the URL is not empty
 
          it('has a URL defined', () => {
            /*for(let feed of allFeeds) {
              expect(feed.url).toBeDefined();
-             expect(feed.url.lrngth).not.toBe(0);
+             expect(feed.url.length).not.toBe(0);
            }*/
 
            //trying to use forEach for practice
            allFeeds.forEach(feed => {
              expect(feed.url).toBeDefined();
-             expect(feed.url.lrngth).not.toBe(0);
+             expect(feed.url.length).not.toBe(0);
            })
          });
 
 
-        /* TODO: Write a test that loops through each feed
-         * in the allFeeds object and ensures it has a name defined
-         * and that the name is not empty.
-         */
+         // ensures it has a name defined and that the name is not empty
 
          it('has a name defined', () => {
            allFeeds.forEach(feed => {
@@ -69,6 +63,8 @@ $(function() {
        * the CSS to determine how we're performing the
        * hiding/showing of the menu element.
        */
+
+       // ensures the menu element is hidden by default
 
        it('element is hidden by default', () => {
          const element = document.querySelector('body');
@@ -121,7 +117,7 @@ $(function() {
 
          it('at least single entry element', () => {
            const enteryElement = $('.entry');
-           expect(enteryElement.length).toBeGreaterThan(0);
+           expect(enteryElement.parents.length).toBeGreaterThan(0);
          });
        });
 
