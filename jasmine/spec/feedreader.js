@@ -117,7 +117,7 @@ $(function() {
 
          it('at least single entry element', () => {
            const enteryElement = $('.entry');
-           expect(enteryElement.parents.length).toBeGreaterThan(0);
+           expect($('.feed').children(enteryElement).length).toBeGreaterThan(0);
          });
        });
 
